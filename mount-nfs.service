@@ -1,0 +1,12 @@
+[Unit]
+Description=Mount NFS Shares
+After=network-online.target
+
+[Service]
+User=root
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/bin/mount-nfs.py
+ExecStop=/usr/bin/python3 /usr/bin/mount-nfs.py -u
+
+[Install]
+WantedBy=multi-user.target

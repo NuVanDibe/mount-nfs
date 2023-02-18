@@ -1,0 +1,17 @@
+shares:
+  - name: homeserver
+    ip_address: 192.168.1.15
+    paths:
+      - path: /home/user/documents
+        mount_point: /mount/homeserver/mydocs
+  - name: synology
+    ip_address: 192.168.1.31
+    paths:
+      - path: /volume1/Videos
+        mount_point: /mount/mediashare/videos
+      - path: /volume1/Music
+        mount_point: /mount/mediashare/music
+      - path: /volume1/documents
+        mount_point: /mount/syno/docs
+      - path: /volume1/docker
+        mount_point: /mount/syno/docker
